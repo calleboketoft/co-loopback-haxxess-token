@@ -5,6 +5,6 @@ module.exports = function (server) {
   // and attach it to the response object for this function
   AccessToken.findForRequest = function (req, options, cb) {
     var userId = req.query.access_token || req.headers.authorization
-    cb(null, { userId })
+    cb(null, { userId: userId })
   }
 }
